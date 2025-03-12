@@ -25,15 +25,37 @@ let formBox = document.querySelector(".form-box");
 const form = document.getElementById("registrationForm");
 const loader = document.querySelector(".form-overlay-loader");
 let submitBtn = document.querySelector(".submit-btn");
+let cloesForm = document.querySelector(".cloesForm");
 
 openFormBtn.forEach(function (item) {
   item.addEventListener("click", function () {
     overlay.style.display = "block";
     formBox.classList.add("form-box-active");
+    document.body.style.overflowY = "hidden";
   });
 });
 
+cloesForm.addEventListener("click", function () {
+  overlay.style.display = "none";
+  formBox.classList.remove("form-box-active");
+  document.body.style.overflowY = "auto";
+});
+
+overlay.addEventListener("click", function () {
+  overlay.style.display = "none";
+  formBox.classList.remove("form-box-active");
+  document.body.style.overflowY = "auto";
+});
+
 const phoneInput = document.getElementById("phone");
+
+phoneInput.addEventListener("keypress", function (e) {
+  // Agar kiritilgan belgi raqam bo‘lmasa, kiritishni to‘xtatamiz
+  if (!/[0-9]/.test(e.key)) {
+    e.preventDefault();
+  }
+});
+
 phoneInput.addEventListener("input", function (e) {
   let value = e.target.value.replace(/[^\d]/g, "");
   if (value.length > 3) {
@@ -92,9 +114,9 @@ form.addEventListener("submit", async function (e) {
 
   if (isValid) {
     loader.style.display = "flex";
-    formBox.classList.remove("form-box-active")
+    formBox.classList.remove("form-box-active");
     overlay.style.display = "none";
-    
+
     form.querySelector(".submit-btn").disabled = true;
 
     // Prepare data for Google Sheets
@@ -112,7 +134,7 @@ form.addEventListener("submit", async function (e) {
       );
 
       if (response.ok) {
-        window.location = "/target.html"
+        window.location = "/target.html";
         form.reset();
         submitBtn.textContent = "Davom etish";
         document.getElementById("phone").value = "+998";
@@ -125,7 +147,7 @@ form.addEventListener("submit", async function (e) {
     } finally {
       loader.style.display = "none";
       form.querySelector(".submit-btn").disabled = false;
-      overlay.style.display = "none"
+      overlay.style.display = "none";
       formBox.classList.remove("form-box-active");
     }
   }

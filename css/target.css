@@ -1,1 +1,240 @@
-.emoji,body{display:flex}.info-box,.progress-bar,.subscribe-btn{margin-left:auto;margin-right:auto}*{margin:0;padding:0;box-sizing:border-box}body{justify-content:center;align-items:center;height:100vh;background:linear-gradient(to bottom,#b9cbe3,#eac7d2);font-family:Arial,sans-serif;padding:20px}.container{background:#fff;padding:30px 30px 60px;border-radius:15px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.1);max-width:1300px;width:100%}h1{font-size:32px;font-weight:600;margin-bottom:40px}.progress-bar{width:100%;height:12px;background:#d1d5db;border-radius:10px;margin-bottom:30px;max-width:400px}.progress{width:90%;height:100%;background:#a000ff;border-radius:10px}.info-box{border:1px solid #d1d5db;padding:15px;border-radius:8px;margin-bottom:40px;font-size:16px;max-width:450px}p{font-size:18px;font-weight:500;margin-bottom:20px}.emoji{justify-content:center;align-items:center;margin-top:10px}.emoji img{width:40px;height:40px}.subscribe-btn{min-height:60px;display:flex;align-items:center;justify-content:center;gap:15px;max-width:350px;width:100%;text-decoration:none;color:#fff;font-size:18px;font-weight:600;border-radius:50px;background-color:#178cfb;border-color:transparent;transition:background .3s ease-in-out;box-shadow:0 5px 0 0 #01456c}.subscribe-btn:hover{background:#0056b3}@media (max-width:768px){h1{font-size:28px;margin-bottom:15px}h2{font-size:24px}.container{padding:20px 20px 40px}.progress-bar{max-width:300px}.info-box{font-size:14px;max-width:100%}.subscribe-btn,p{font-size:16px}.subscribe-btn{min-height:55px;max-width:300px}.emoji img{width:36px;height:36px}}@media (max-width:480px){h1,h2{font-size:20px}h1{line-height:24px}.container{padding:15px 15px 30px}.progress-bar{max-width:250px}.info-box{font-size:13px}.subscribe-btn,p{font-size:14px}.subscribe-btn{min-height:50px;max-width:280px}.emoji img{width:32px;height:32px}}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Benzin-Bold;
+    src: url(../font/benzin-bold.otf);
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.target {
+    padding-top: 55px;
+    padding-bottom: 82px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/target/bg.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.targetContainer {
+    max-width: 641px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.targetTitle {
+    font-family: Benzin-Bold, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 34px;
+}
+
+.progressBox {
+    width: 100%;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 100px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background-color: #00EB86;
+    border-radius: 100px;
+}
+
+.targetInfo {
+    border: 2px solid #00EB86;
+    border-radius: 15px;
+    padding: 24px 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.targetInfoText {
+    max-width: 430px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.mb-29 {
+    margin-bottom: 29px;
+}
+
+.max-308 {
+    max-width: 308px;
+}
+
+.emoji {
+    margin-top: 10px;
+    width: 44px;
+    height: 44px;
+}
+
+.giftImg {
+    position: absolute;
+    right: -120px;
+    bottom: 30px;
+    display: flex;
+}
+
+.giftText {
+    max-width: 222px;
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    right: -35%;
+    bottom: 220px;
+}
+
+.subsCribeBtn {
+    max-width: 354px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #29A1DD;
+    box-shadow: 0px 6px 0px 0px #01456C;
+    padding: 21px 41px;
+    border: none;
+    border-radius: 100px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 31px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.giftTextMobile{
+    display: none;
+}
+
+@media(max-width: 1024px) {
+    .giftImg{
+        display: none;
+    }
+    .giftText{
+        display: none;
+    }
+    /* .mobileGiftBox{
+        display: flex;
+        align-items: center;
+    } */
+    /* .mobileGiftBox .giftImg{
+        display: flex;
+        position: static;
+    } */
+    .giftTextMobile {
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+        max-width: 222px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .targetTitle{
+        font-size: 28px;
+        line-height: 32px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .targetInfoText{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .subsCribeBtn{
+        font-size: 18px;
+        padding: 10px ;
+        max-width: 276px;
+    }
+}
+
+@media(max-width: 425px) {
+    .targetTitle{
+        font-size: 22px;
+        line-height: 24px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .targetInfoText{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .progressBox{
+        height: 10px;
+    }
+    .subsCribeBtn{
+        font-size: 14px;
+        padding: 10px ;
+        max-width: 246px;
+    }
+    .subsCribeBtn > svg{
+        width: 24px;
+        height: 24px;
+    }
+    .targetInfo{
+        padding: 20px;
+    }
+    .giftTextMobile{
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+@media(max-width:345px){
+    .targetTitle{
+        font-size: 20px;
+    }
+}
+
